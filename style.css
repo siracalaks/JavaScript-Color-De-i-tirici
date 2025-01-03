@@ -11,6 +11,17 @@ Global Styles
 ===============
 */
 
+/* CSS Variables */
+:root {
+    --transition-speed: 0.3s;
+    --primary-color: hsl(205, 78%, 60%);
+    --primary-dark: hsl(205, 86%, 17%);
+    --background-light: hsl(210, 36%, 96%);
+    --text-color: hsl(209, 61%, 16%);
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 *,
 ::after,
 ::before {
@@ -18,13 +29,16 @@ Global Styles
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: "Open Sans", sans-serif;
-    background:  hsl(210, 36%, 96%);
-    color: hsl(209, 61%, 16%);
+    background: var(--background-light);
+    color: var(--text-color);
     line-height: 1.5;
     font-size: 0.875rem;
+    transition: background-color var(--transition-speed) ease;
 }
+
 ul {
     list-style-type: none;
     display: flex;
@@ -114,7 +128,7 @@ nav {
     height: 3rem;
     display: grid;
     align-items: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-dark);
 }
 .nav-center {
     width: 90vw;
@@ -126,21 +140,24 @@ nav {
 }
 .nav-center h4 {
     margin-bottom: 0;
-    color: hsl(205, 78%, 60%);
+    color: var(--primary-color);
 }
 .nav-links {
     display: flex;
+    list-style-type: none;
 }
 nav a {
+    text-decoration: none;
     text-transform: capitalize;
     font-weight: 700;
     font-size: 1rem;
-    color:  hsl(205, 86%, 17%);
+    color: var(--primary-dark);
     letter-spacing: 0.1rem;
     margin-right: 1rem;
+    transition: color var(--transition-speed) ease;
 }
 nav a:hover {
-    color: hsl(205, 78%, 60%);
+    color: var(--primary-color);
 }
 /*
 =============== 
@@ -161,9 +178,15 @@ main {
     padding: 1rem;
     border-radius: 0.25rem;
     margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-light);
 }
 .color {
-    color: hsl(205, 78%, 60%);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+.color:hover {
+    opacity: 0.8;
 }
 .btn-hero {
     font-family: "Roboto", sans-serif;
@@ -173,10 +196,10 @@ main {
     letter-spacing: 0.1rem;
     display: inline-block;
     font-weight: 700;
-    transition: all 0.3s linear;
+    transition: all var(--transition-speed) ease;
     border: 2px solid #222;
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-light);
     border-radius: 0.25rem;
     font-size: 1rem;
     padding: 0.75rem 1.25rem;
@@ -184,4 +207,6 @@ main {
 .btn-hero:hover {
     color: #fff;
     background: #222;
+    box-shadow: var(--shadow-dark);
+    transform: translateY(-2px);
 }

@@ -62,7 +62,7 @@ The project implements:
 
 ## Live Demo
 
-[Netlify Link]
+[[Live Demo](https://javascript-color-changer.netlify.app/)]
 
 ## Purpose
 
@@ -96,6 +96,28 @@ Potential enhancements for the future:
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
 
-## Contact
+## 👨‍💻 Developer
 
-[Your contact information] 
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/siracalaks">
+        <img src="https://github.com/siracalaks.png" width="100px;" alt="Developer Profile Picture"/>
+        <br />
+        <sub><b>Sirac</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+### Contact
+- 📧 Email: [siracalaks@gmail.com](mailto:email@example.com)
+- 💼 LinkedIn: [https://www.linkedin.com/in/sirac-alakus-64a29917a/](https://www.linkedin.com/in/sirac-alakus-64a29917a/)
+
+---
+
+<div align="center">
+
+⭐️ If you enjoyed this project, don’t forget to give it a star!
+
+</div>
